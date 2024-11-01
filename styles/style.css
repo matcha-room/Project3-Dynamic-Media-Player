@@ -13,6 +13,7 @@ html {
 
 body {
 	overflow-y: scroll;
+	padding-top: 60px;
 }
 
 div {
@@ -81,11 +82,31 @@ button {
 
 /* =========================================== Header =========================================== */
 
+header {
+	display: block;
+	width: 100%;
+}
+
 #head {
+	height: 55px;
+	padding: 0 16px;
+
+	z-index: 100;
+
 	display: flex;
+	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 16px;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	background-color: white;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgb(228, 228, 228);
 }
 
 #center {
@@ -93,7 +114,7 @@ button {
 	align-items: center;
 }
 
-#searchbar {
+#search-bar {
 	display: flex;
 	align-items: center;
 }
@@ -115,7 +136,6 @@ button {
 main {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 }
 
 #columns {
@@ -135,7 +155,7 @@ main {
 
 #player {
 	position: relative;
-	min-width: 360px;
+	min-width: 375px;
 	object-fit: cover;
 	overflow: hidden;
 }
@@ -171,14 +191,14 @@ main {
 }
 
 #actions {
-	display: flex;
-	flex-direction: row-reverse;
+	display: inline-block;
 	min-width: calc(50% - 6px);
 }
 
 #content-options {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
 #subscribe,
@@ -195,20 +215,35 @@ main {
 #like-button {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	border-radius: 18px 0 0 18px;
+	padding: 0 16px;
 	height: 36px;
 	color: #0f0f0f;
 	background: rgba(0, 0, 0, 0.05);
+	position: relative;
+}
+
+#like-button::after {
+	content: "";
+	background: rgba(0, 0, 0, 0.1);
+	height: 24px;
+	width: 4px;
+	position: absolute;
+	left: 100%; /* Position the ::after element to the right of #like-button */
+	top: 6px; /* Adjust the position as needed */
 }
 
 #like-icon-container,
 #dislike-icon-container {
+	display: flex;
 	padding: 0 16px;
 }
 
 #dislike-button {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	width: 52px;
 	height: 36px;
 	background: rgba(0, 0, 0, 0.05);
@@ -287,6 +322,11 @@ main {
 	padding: 24px 24px 0px 0px;
 }
 
+#recommendations {
+	display: flex;
+	flex-direction: column;
+}
+
 .recommended_video {
 	display: flex;
 	flex-direction: row;
@@ -295,10 +335,17 @@ main {
 
 .thumbnail {
 	border-radius: 4px;
+	margin-right: 8px;
 }
 
 .info {
+	width: 100%;
+	margin-right: 8px;
+}
+
+.info-content {
 	padding-right: 24px;
+	width: 100%;
 }
 
 .rec_title {
@@ -307,15 +354,11 @@ main {
 
 .rec_info {
 	display: flex;
-	justify-content: center;
 	align-items: center;
 }
 
 .rec_button {
 	display: flex;
-	position: absolute;
-	top: 0;
-	right: 0;
 }
 
 /* =================== Font classes ================= */
@@ -390,4 +433,32 @@ main {
 	font-family: "Roboto", sans-serif;
 	font-weight: 900;
 	font-style: italic;
+}
+
+@media (max-width: 999px) {
+	#search-input {
+		display: none;
+	}
+
+	#end {
+		display: none;
+	}
+
+	#columns {
+		flex-direction: column;
+	}
+
+	#top-row {
+		flex-direction: column;
+	}
+
+	#actions {
+		display: inline-block;
+		width: 100%;
+	}
+
+	#secondary-column {
+		display: none;
+		width: 0px;
+	}
 }
