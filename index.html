@@ -4,144 +4,276 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Project 3: Dynamic Media Player</title>
-        <link rel="stylesheet" href="./styles/style.css" />
-        <link rel="stylesheet" href="./styles/content.css" />
-        <link rel="stylesheet" href="./styles/header.css" />
-        <script src="/scripts/main.js" defer></script>
-        <script src="/scripts/player_controls.js" defer></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./styles/style.css" />
+		<link rel="stylesheet" href="./styles/content.css" />
+		<link rel="stylesheet" href="./styles/header.css" />
+		<script src="/scripts/main.js" defer></script>
+		<script src="/scripts/player_controls.js" defer></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<header>
-            <div id="head">
-                <div id="start">
-                    <button id="hamburger">
-                        <img src="https://picsum.photos/24" alt="hamburger menu" />
-                    </button>
-                    <img id="yt-logo" src="https://picsum.photos/93/20" alt="YouTube logo" />
-                </div>
-                <div id="center">
-                    <div id="searchbar">
-                        <input type="text" id="search-input" placeholder="Search" />
-                        <button id="search-button">
-                            <img src="https://picsum.photos/24" alt="Search button" />
-                        </button>
-                    </div>
-                    <div id="voice-input">
-                        <button id="voice-icon">
-                            <img src="https://picsum.photos/24" alt="Voice search icon" />
-                        </button>
-                    </div>
-                </div>
-                <div id="end">
-                    <a class="button" id="upload" href="#">
-                        <img src="https://picsum.photos/24" alt="Upload button" />
-                    </a>
-                    <a class="button" id="notifications">
-                        <img src="https://picsum.photos/24" alt="Notifications icon" />
-                    </a>
-                    <img src="https://picsum.photos/32" class="avatar" alt="My Channel Avatar" />
-                </div>
-            </div>
-        </header>
+			<div id="head">
+				<div id="start">
+					<button id="hamburger">
+						<img
+							src="https://picsum.photos/24"
+							alt="hamburger menu"
+						/>
+					</button>
+					<img
+						id="yt-logo"
+						src="https://picsum.photos/93/20"
+						alt="YouTube logo"
+					/>
+				</div>
+				<div id="center">
+					<div id="searchbar">
+						<input
+							type="text"
+							id="search-input"
+							placeholder="Search"
+						/>
+						<button id="search-button">
+							<img
+								src="https://picsum.photos/24"
+								alt="Search button"
+							/>
+						</button>
+					</div>
+					<div id="voice-input">
+						<button id="voice-icon">
+							<img
+								src="https://picsum.photos/24"
+								alt="Voice search icon"
+							/>
+						</button>
+					</div>
+				</div>
+				<div id="end">
+					<a class="button" id="upload" href="#">
+						<img
+							src="https://picsum.photos/24"
+							alt="Upload button"
+						/>
+					</a>
+					<a class="button" id="notifications">
+						<img
+							src="https://picsum.photos/24"
+							alt="Notifications icon"
+						/>
+					</a>
+					<img
+						src="https://picsum.photos/32"
+						class="avatar"
+						alt="My Channel Avatar"
+					/>
+				</div>
+			</div>
+		</header>
 		<main>
 			<div id="columns">
 				<div id="primary-column">
-                    <div id="player">
-                        <img src="https://picsum.photos/960/540">
-                    </div>
-                    <div id="bottom">
-                        <div id="media-info">
-                            <div id="title">
-                                <div id="title-text">
-                                    <h1>THIS IS THE VIDEO TITLE</h1>
-                                </div>
-                                <div id="media-controls"></div>
-                            </div>
-                            <div id="top-row">
-                                <div id="channel-info">
-                                    <img id="channel-avatar" class="avatar" src="https://picsum.photos/32"/>
-                                    <div id="channel-name">
-                                        <a id="channel-name-text" href="#">Channel name</a>
-                                        <p id="subscriber-count">12,345 subscribers</p>
-                                    </div>
-                                    <button id="subscribe">Subscribe</button>
-                                </div>
-                                <div id="video-options">
-                                    <div id="like-dislike">
-                                        <button id="like-button">
-                                            <img id="like-icon" src="https://picsum.photos/24" alt="Like button"/>
-                                            5K
-                                        </button>
-                                        <button id="dislike-button">
-                                            <img id="dislike-icon" src="https://picsum.photos/24" alt="Dislike button"/>
-                                        </button>
-                                    </div>
-                                    <button id="share">
-                                        <img id="share-icon" src="https://picsum.photos/24" alt="Share button"/>
-                                        Share
-                                    </button>
-                                    <button id="save">
-                                        <img id="save-icon" src="https://picsum.photos/24" alt="Save button"/>
-                                        Save
-                                    </button>
-                                    <button id="more-options">
-                                        <img id="more-icon" src="https://picsum.photos/24" alt="More options button"/>
-                                    </button>
-                                </div>
-                            </div>
-                            <div id="bottom-row">
-                                <div id="description">
-                                    <div id="watch-info">
-                                        <p id="view-count">views</p>
-                                        <p id="published-date">10/31/2024</p>
-                                    </div>
-                                    <div id="description-text">
-                                        <p id="description-text-content">
-                                            This is the video description. I hope you enjoy my video. I worked very hard on it <3
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="comments-section">
-                            <div id="comments-title">
-                                <h2 id="comments-count">Comments</h2>
-                                <div id="sort">
-                                    <button id="sort-menu">Sort by</button>
-                                </div>    
-                            </div>
-                            <div id="comment-add-section">
-                                <img class="avatar" src="https://picsum.photos/24" alt="User Avatar">
-                                <div id="comment-input">
-                                    <input type="text" id="comment-textbox" value="Add a comment..."/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+					<div id="player">
+						<div id="player-container">
+							<div id="player-content">
+								<video
+									id="video-player"
+									src="/media/parkour.mp4"
+									autoplay
+								></video>
+							</div>
+							<!-- <div id="player-controls">
+								<div id="progress-bar">
+									<div id="progress-bar-fill"></div>
+								</div>
+								<div id="time-controls">
+									<div id="current-time">0:00</div>
+									<div id="duration">0:00</div>
+									<button id="rewind">
+										<img
+											src="https://picsum.photos/24"
+											alt="Rewind button"
+										/>
+									</button>
+									<button id="play-pause">
+										<img
+											id="play-pause-icon"
+											src="https://picsum.photos/24"
+											alt="Play/Pause button"
+										/>
+									</button>
+									<button id="fast-forward">
+										<img
+											src="https://picsum.photos/24"
+											alt="Fast forward button"
+										/>
+									</button>
+								</div>
+								<div id="volume-controls"></div>
+							</div> -->
+						</div>
+					</div>
+					<div id="bottom">
+						<div id="video-info">
+							<div id="title">
+								<div id="title-text">
+									<h1>THIS IS THE VIDEO TITLE</h1>
+								</div>
+								<div id="media-controls"></div>
+							</div>
+							<div id="top-row">
+								<div id="channel-info">
+									<a href="#">
+										<img
+											id="channel-avatar"
+											class="avatar"
+											src="https://picsum.photos/32"
+										/>
+									</a>
+									<div id="channel-name">
+										<a id="channel-name-text" href="#"
+											><h3>Channel name</h3></a
+										>
+										<p id="subscriber-count">
+											12,345 subscribers
+										</p>
+									</div>
+									<button id="subscribe">Subscribe</button>
+								</div>
+								<div id="actions">
+									<div id="content-options">
+										<div id="like-dislike">
+											<button id="like-button">
+												<div id="like-icon-container">
+													<img
+														id="like-icon"
+														src="https://picsum.photos/24"
+														alt="Like button"
+													/>
+												</div>
+												<div id="like-count">5K</div>
+											</button>
+											<button id="dislike-button">
+												<div
+													id="dislike-icon-container"
+												>
+													<img
+														id="dislike-icon"
+														src="https://picsum.photos/24"
+														alt="Dislike button"
+													/>
+												</div>
+											</button>
+										</div>
+										<button id="share">
+											<img
+												id="share-icon"
+												src="https://picsum.photos/24"
+												alt="Share button"
+											/>
+											Share
+										</button>
+										<button id="save">
+											<img
+												id="save-icon"
+												src="https://picsum.photos/24"
+												alt="Save button"
+											/>
+											Save
+										</button>
+										<button id="more-options">
+											<img
+												id="more-icon"
+												src="https://picsum.photos/24"
+												alt="More options button"
+											/>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div id="bottom-row">
+								<div id="description-container">
+									<div id="content-stats">
+										<p id="view-count">views</p>
+										<p id="published-date">10/31/2024</p>
+									</div>
+									<div id="description-text">
+										<p id="description-text">
+											This is the video description. I
+											hope you enjoy my video. I worked
+											very hard on it <3
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="comments-section">
+							<div id="comments-header">
+								<h1 id="comments-count">Comments</h1>
+								<div id="sort">
+									<button id="sort-menu">
+										<img
+											src="https://picsum.photos/24"
+											alt="sort button icon"
+										/>
+										Sort by
+									</button>
+								</div>
+							</div>
+							<div id="comment-add-container">
+								<img
+									class="avatar"
+									src="https://picsum.photos/24"
+									alt="User Avatar"
+								/>
+								<div id="comment-input">
+									<input
+										type="text"
+										id="comment-textbox"
+										value="Add a comment..."
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div id="secondary-column">
-                    <div id="recommendations">
-                        <div class="recommended_video">
-                            <img class="thumbnail" src="https://picsum.photos/176/99"/>
-                            <div class="info">
-                                <a class="info_container" href="#">
-                                    <h3 class="rec_title">Video Title</h3>
-                                    <p class="rec_name">This is a recommended video</p>
-                                    <div class="rec_info">
-                                    <p class="rec_views">12,345 views</p>
-                                    <p class="dot">・</p>
-                                    <p class="rec_date">10/31/2024</p>
-                                </a>
-                            </div>
-                            <div id="rec-menu">
-                                <button class="rec_button"><img src="https://picsum.photos/24" alt="Three dot menu button"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+					<div id="recommendations">
+						<div class="recommended_video">
+							<div class="thumbnail_container">
+								<img
+									class="thumbnail"
+									src="https://picsum.photos/176/99"
+								/>
+							</div>
+							<div class="info">
+								<a class="info_content" href="#">
+									<h4 class="rec_title">Video Title</h4>
+									<p class="rec_channel">MrBest</p>
+									<div class="rec_info">
+										<p class="rec_views">12,345 views</p>
+										<p class="dot">・</p>
+										<p class="rec_date">10/31/2024</p>
+									</div>
+								</a>
+							</div>
+							<div id="rec-menu">
+								<button class="rec_button">
+									<img
+										src="https://picsum.photos/24"
+										alt="Three dot menu button"
+									/>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</main>
 	</body>
