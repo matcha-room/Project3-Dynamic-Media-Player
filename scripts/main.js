@@ -22,7 +22,6 @@ function init() {
 		{ seconds: 15, callback: func1 },
 		{ seconds: 25, callback: func1 },
 		{ seconds: 37, callback: func1 },
-		{ seconds: 50, callback: func1 },
 	];
 }
 
@@ -38,7 +37,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
 		{ seconds: 25, callback: shakeScreen },
 		{ seconds: 83, callback: shakeScreen },
 		{ seconds: 108, callback: shakeScreen },
-		{ seconds: 50, callback: shakeScreen },
 	];
 
 	cueTimer.setup("vid", myCues);
@@ -48,7 +46,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 //You can code up whatever behavior you need in your own callbacks
 
 function func1() {
-	console.log("ELlo Losers");
+	console.log("callback test");
 }
 
 function shakeScreen(duration, intensity) {
