@@ -7,8 +7,7 @@
 		<link rel="stylesheet" href="./styles/style.css" />
 		<link rel="stylesheet" href="./styles/content.css" />
 		<link rel="stylesheet" href="./styles/header.css" />
-		<script src="/scripts/main.js" defer></script>
-		<script src="/scripts/player_controls.js" defer></script>
+		<script type="module" src="/scripts/main.js"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -25,17 +24,16 @@
 							class="icon yt_black"
 							src="./icons/menu.svg"
 							alt="hamburger menu"
-							type="image/svg+xml"
 						/>
 					</button>
 					<div id="yt-logo">
 						<img src="./icons/logo.png" alt="YouTube logo" />
-						not youtube
+						REAL youtube
 					</div>
 				</div>
 				<div id="center">
 					<input type="text" id="search-input" placeholder="Search" />
-					<button id="search-button">
+					<button class="search-button">
 						<img
 							class="icon"
 							src="./icons/search.svg"
@@ -53,7 +51,7 @@
 					</div>
 				</div>
 				<div id="end">
-					<button id="search-button" class="disabled">
+					<button class="search-button disabled">
 						<img
 							class="icon"
 							src="./icons/search.svg"
@@ -90,7 +88,7 @@
 						<div id="player-container">
 							<div id="player-content">
 								<video
-									id="video-player"
+									id="vid"
 									src="./media/parkour.mp4"
 									autoplay
 									controls
@@ -143,6 +141,7 @@
 												id="channel-avatar"
 												class="avatar"
 												src="https://picsum.photos/32"
+												alt="Channel avatar"
 											/>
 										</a>
 										<div id="channel-name">
@@ -160,17 +159,17 @@
 									<div id="content-options">
 										<div id="like-dislike">
 											<button id="like-button">
-												<div id="like-icon-container">
+												<span id="like-icon-container">
 													<img
 														class="icon"
 														src="./icons/thumbs-up.svg"
 														alt="Like button"
 													/>
-												</div>
-												<div id="like-count">5K</div>
+												</span>
+												<span id="like-count">5K</span>
 											</button>
 											<button id="dislike-button">
-												<div
+												<span
 													id="dislike-icon-container"
 												>
 													<img
@@ -178,7 +177,7 @@
 														src="./icons/thumbs-up.svg"
 														alt="Dislike button"
 													/>
-												</div>
+												</span>
 											</button>
 										</div>
 										<button id="share">
@@ -206,10 +205,10 @@
 										<p id="published-date">10/31/2024</p>
 									</div>
 									<div id="description-text">
-										<p id="description-text">
+										<p>
 											This is the video description. I
 											hope you enjoy my video. I worked
-											very hard on it <3
+											very hard on it ♡
 										</p>
 									</div>
 								</div>
@@ -233,7 +232,7 @@
 								<div id="comment-add-container">
 									<img
 										class="avatar"
-										src="https://picsum.photos/24"
+										src="https://picsum.photos/32"
 										alt="User Avatar"
 									/>
 									<div class="comment_textbox">
@@ -255,31 +254,229 @@
 							<div class="thumbnail_container">
 								<img
 									class="thumbnail"
-									src="https://picsum.photos/176/99"
+									src="https://picsum.photos/1925/1085"
+									alt="Thumbnail 1"
 								/>
 							</div>
 							<div class="info">
 								<a class="info_content" href="#">
 									<h4 class="rec_title">
-										This is the coolest video you will ever
-										watch in your life
+										10 Tips for Beginner Video Editing
 									</h4>
-									<p class="rec_channel">MrBest</p>
+									<p class="rec_channel">FilmSchool101</p>
 									<div class="rec_info">
-										<p class="rec_views">12,345 views</p>
+										<p class="rec_views">105,732 views</p>
 										<p class="dot">・</p>
-										<p class="rec_date">10/31/2024</p>
+										<p class="rec_date">2 days ago</p>
 									</div>
 								</a>
 							</div>
-							<div id="rec-menu">
-								<button class="rec_button">
-									<img
-										class="icon menu-vertical"
-										src="./icons/menu-dots.svg"
-										alt="Three dot menu button"
-									/>
-								</button>
+						</div>
+
+						<div class="recommended_video">
+							<div class="thumbnail_container">
+								<img
+									class="thumbnail"
+									src="https://picsum.photos/1280/720"
+									alt="Thumbnail 2"
+								/>
+							</div>
+							<div class="info">
+								<a class="info_content" href="#">
+									<h4 class="rec_title">
+										World’s Smallest Drone Test Flight
+									</h4>
+									<p class="rec_channel">GadgetGuy</p>
+									<div class="rec_info">
+										<p class="rec_views">204,111 views</p>
+										<p class="dot">・</p>
+										<p class="rec_date">1 week ago</p>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<div class="recommended_video">
+							<div class="thumbnail_container">
+								<img
+									class="thumbnail"
+									src="https://picsum.photos/1600/900"
+									alt="Thumbnail 3"
+								/>
+							</div>
+							<div class="info">
+								<a class="info_content" href="#">
+									<h4 class="rec_title">
+										ReactJS Crash Course – Learn the Basics
+									</h4>
+									<p class="rec_channel">CodeAcademy</p>
+									<div class="rec_info">
+										<p class="rec_views">1,524,398 views</p>
+										<p class="dot">・</p>
+										<p class="rec_date">3 months ago</p>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<div class="recommended_video">
+							<div class="thumbnail_container">
+								<img
+									class="thumbnail"
+									src="https://picsum.photos/1366/768"
+									alt="Thumbnail 4"
+								/>
+							</div>
+							<div class="info">
+								<a class="info_content" href="#">
+									<h4 class="rec_title">
+										Top 10 Destinations to Visit in 2024
+									</h4>
+									<p class="rec_channel">TravelWithMe</p>
+									<div class="rec_info">
+										<p class="rec_views">785,555 views</p>
+										<p class="dot">・</p>
+										<p class="rec_date">1 month ago</p>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<div class="recommended_video">
+							<div class="thumbnail_container">
+								<img
+									class="thumbnail"
+									src="https://picsum.photos/1440/810"
+									alt="Thumbnail 5"
+								/>
+							</div>
+							<div class="info">
+								<a class="info_content" href="#">
+									<h4 class="rec_title">
+										5 Easy Vegan Dinner Recipes
+									</h4>
+									<p class="rec_channel">HealthyEats</p>
+									<div class="rec_info">
+										<p class="rec_views">892,034 views</p>
+										<p class="dot">・</p>
+										<p class="rec_date">2 weeks ago</p>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<div class="recommended_video">
+							<div class="thumbnail_container">
+								<img
+									class="thumbnail"
+									src="https://picsum.photos/1920/1080"
+									alt="Thumbnail 6"
+								/>
+							</div>
+							<div class="info">
+								<a class="info_content" href="#">
+									<h4 class="rec_title">
+										Extreme Weather Caught on Camera
+									</h4>
+									<p class="rec_channel">WeatherWorld</p>
+									<div class="rec_info">
+										<p class="rec_views">2,354,788 views</p>
+										<p class="dot">・</p>
+										<p class="rec_date">5 days ago</p>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<div class="recommended_video">
+							<div class="thumbnail_container">
+								<img
+									class="thumbnail"
+									src="https://picsum.photos/1400/788"
+									alt="Thumbnail 7"
+								/>
+							</div>
+							<div class="info">
+								<a class="info_content" href="#">
+									<h4 class="rec_title">
+										How to Master Digital Art with Procreate
+									</h4>
+									<p class="rec_channel">ArtInsights</p>
+									<div class="rec_info">
+										<p class="rec_views">412,333 views</p>
+										<p class="dot">・</p>
+										<p class="rec_date">1 month ago</p>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<div class="recommended_video">
+							<div class="thumbnail_container">
+								<img
+									class="thumbnail"
+									src="https://picsum.photos/1536/864"
+									alt="Thumbnail 8"
+								/>
+							</div>
+							<div class="info">
+								<a class="info_content" href="#">
+									<h4 class="rec_title">
+										Mythical Creatures You’ve Never Heard Of
+									</h4>
+									<p class="rec_channel">CuriousWorld</p>
+									<div class="rec_info">
+										<p class="rec_views">1,014,122 views</p>
+										<p class="dot">・</p>
+										<p class="rec_date">2 months ago</p>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<div class="recommended_video">
+							<div class="thumbnail_container">
+								<img
+									class="thumbnail"
+									src="https://picsum.photos/1280/720"
+									alt="Thumbnail 9"
+								/>
+							</div>
+							<div class="info">
+								<a class="info_content" href="#">
+									<h4 class="rec_title">
+										History of the Internet: Explained
+									</h4>
+									<p class="rec_channel">TechHistory</p>
+									<div class="rec_info">
+										<p class="rec_views">750,994 views</p>
+										<p class="dot">・</p>
+										<p class="rec_date">4 months ago</p>
+									</div>
+								</a>
+							</div>
+						</div>
+
+						<div class="recommended_video">
+							<div class="thumbnail_container">
+								<img
+									class="thumbnail"
+									src="https://picsum.photos/1344/756"
+									alt="Thumbnail 10"
+								/>
+							</div>
+							<div class="info">
+								<a class="info_content" href="#">
+									<h4 class="rec_title">
+										Minecraft Build Tips & Tricks
+									</h4>
+									<p class="rec_channel">GameMasters</p>
+									<div class="rec_info">
+										<p class="rec_views">1,234,567 views</p>
+										<p class="dot">・</p>
+										<p class="rec_date">6 days ago</p>
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
